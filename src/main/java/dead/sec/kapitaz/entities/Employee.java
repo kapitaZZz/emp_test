@@ -1,4 +1,4 @@
-package dead.sec.kapitaz.dao;
+package dead.sec.kapitaz.entities;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
