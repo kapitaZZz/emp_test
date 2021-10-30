@@ -5,7 +5,7 @@
   Time: 0:26
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%--<%@ page contentType="text/html;charset=UTF-8" language="java" %>--%>
 <html>
 <head>
     <title>Title</title>
@@ -19,7 +19,8 @@
         <th>Surname</th>
         <th>Department</th>
         <th>Salary</th>
-        <c:forEach var="emp" items="${allEmps}">
+    </tr>
+        <c:forEach var="emp" items="${allEmployee}">
     <tr>
         <td>${emp.name}</td>
         <td>${emp.surname}</td>
@@ -28,7 +29,6 @@
     </tr>
     </c:forEach>
 
-    </tr>
 </table>
 
 </body>

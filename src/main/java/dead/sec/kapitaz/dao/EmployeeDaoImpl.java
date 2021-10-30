@@ -10,22 +10,19 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 
 @Repository
-public class EmployeeDaoImpl implements EmployeeDao{
-
-    private SessionFactory sessionFactory;
+public class EmployeeDaoImpl implements EmployeeDao {
 
     @Autowired
-    public EmployeeDaoImpl(SessionFactory sessionFactory) {
-        this.sessionFactory = sessionFactory;
-    }
+    private SessionFactory sessionFactory;
 
     @Override
     @Transactional
     public List<Employee> getAllEmployees() {
         Session session = sessionFactory.getCurrentSession();
-        List<Employee> employeeList = session.createQuery("from Employees", Employee.class).getResultList();
 
-        return employeeList;
+        List<Employee> allEmployees = session.createQuery("from Employee", Employee.class).getResultList();
+
+        return allEmployees;
     }
 
     @Override
