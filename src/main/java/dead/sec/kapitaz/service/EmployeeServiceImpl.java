@@ -29,4 +29,16 @@ public class EmployeeServiceImpl implements EmployeeService {
     public void saveEmployee(Employee employee) {
         employeeDao.saveEmployee(employee);
     }
+
+    @Override
+    @Transactional
+    public Employee getEmployeeById(int id) {
+        return employeeDao.getEmployeeById(id);
+    }
+
+    @Override
+    @Transactional
+    public void removeEmployeeById(int id) {
+        employeeDao.removeEmployeeById(id);
+    }
 }
